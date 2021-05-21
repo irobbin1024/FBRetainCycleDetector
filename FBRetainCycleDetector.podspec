@@ -24,6 +24,9 @@ Pod::Spec.new do |s|
   ]
 
   files = Pathname.glob("FBRetainCycleDetector/**/*.{h,m,mm}")
+  puts("===============================")
+  puts(files)
+  puts("===============================")
   files = files.map {|file| file.to_path}
   files = files.reject {|file| mrr_files.include?(file)}
 
